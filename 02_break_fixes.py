@@ -1,7 +1,7 @@
 case_tool = {
     "name": "create_case",
     "description": "Create a support case in the CRM.",
-    "strict": True,  # ✅ input is guaranteed to match input_schema
+    "strict": True,  # This will guarantee that when Claude calls it, the input matches your schema
     "input_schema": {
         "type": "object",
         "properties": {

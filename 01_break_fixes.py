@@ -17,3 +17,11 @@ client.messages.create(
     output_config={"effort": "low"},         # between_tools: low / medium / high only
     messages=[{"role": "user", "content": "Classify: 'My invoice is wrong'"}],
 )
+
+client.messages.create(
+    model="claude-sonnet-5-5",
+    max_tokens=64000,                     # leave plenty of room for thinking
+    thinking={"type": "adaptive"},
+    output_config={"effort": "xhigh"},
+    messages=[...],
+)

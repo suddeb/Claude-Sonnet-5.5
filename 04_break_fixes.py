@@ -10,9 +10,12 @@ def ask(model: str, prompt: str):
     )
 
 prompt = "Review this Apex class for security issues and suggest fixes: ..."
+
 response = ask("claude-sonnet-5-5", prompt)
+
 if response.stop_reason == "refusal":
-    category = response.stop_details.category      # cyber | bio | frontier_llm | ...
+    # This will capture the category cyber | bio | frontier_llm | ...
+    category = response.stop_details.category      
     print("Refused:", category)
     if category in ("cyber", "frontier_llm"):
         response = ask("claude-sonnet-5", prompt)  # same fallback target Anthropic uses

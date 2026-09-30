@@ -9,7 +9,7 @@ tools = [
     {
         "name": "get_open_cases",
         "description": "List open support cases for an account.",
-        "strict": True,
+        "strict": True,         # This will guarantee that when Claude calls it, the input matches your schema
         "input_schema": obj({"account": {"type": "string"}}, ["account"]),
     },
     {
