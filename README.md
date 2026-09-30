@@ -53,4 +53,4 @@ grep -rnE 'disabled|tool_choice|content\[0\]|computer_20251124' .
 - Default `effort` is `high` on the Claude API and `medium` in the Claude apps and Claude Code; levels are recalibrated versus Sonnet 5, so re-run the sweep on your own prompts.
 - Thinking tokens count against `max_tokens` and are billed as output tokens.
 - `stop_details.category` attribute access should be confirmed against your installed SDK version.
-- Server-side fallback (`fallbacks: "default"`) is a beta and is not demoed; the client-side retry here is the portable version.
+- Server-side fallback (`fallbacks: "default"`) is a beta and is not demoed; the client-side retry here is the portable version. 
